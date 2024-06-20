@@ -2,8 +2,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import {Server} from 'http'
 import mongoose from 'mongoose';
-import config from './config';
+import config from './app/config';
 import app from './app';
+
 
 let server: Server;
 
