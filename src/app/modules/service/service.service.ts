@@ -48,7 +48,6 @@ const createSlotIntoDB = async (payload:TSlot)=>{
         totalTime = (Number(splittedEndTime[0])-Number(splittedStartTime[0]))*60-(Number(splittedEndTime[1])-Number(splittedStartTime[1]))
     }
     const totalSlot = totalTime as number/duration;
-    
     let newEndTime = startTime
     for(let i=1;i<=totalSlot;i++){
         payload.startTime = newEndTime
@@ -61,6 +60,7 @@ const createSlotIntoDB = async (payload:TSlot)=>{
         newEndTime = `${hours}:${minute}`
         payload.endTime = newEndTime
         await Slot.create(payload)
+        
       
     }
 

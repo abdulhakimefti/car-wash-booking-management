@@ -6,7 +6,6 @@ const slotSchema = new mongoose_1.Schema({
     service: {
         type: mongoose_1.Schema.Types.ObjectId,
         required: [true, 'Service is required'],
-        unique: true,
         ref: 'Service'
     },
     date: {

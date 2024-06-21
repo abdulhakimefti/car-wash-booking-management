@@ -8,7 +8,7 @@ const getAvailableSlotsFromDB =async (payload:Record<string, unknown>)=>{
         {service:payload.serviceId},
         {isBooked:'available'}
     ]}).populate('service')
-
+    
     return result;
 }
 
